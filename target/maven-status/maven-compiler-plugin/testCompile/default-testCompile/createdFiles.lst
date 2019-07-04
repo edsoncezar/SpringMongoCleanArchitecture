@@ -1,7 +1,0 @@
-br/com/user/usecase/ListAllUsersServiceTest.class
-br/com/user/usecase/RemoveUsersServiceTest.class
-br/com/user/UsersApplicationTests.class
-br/com/user/controller/resource/ActionsResourceTest.class
-br/com/user/usecase/AddUsersServiceTest.class
-br/com/user/controller/UsersControllerTest.class
-br/com/user/usecase/ListUsersByIdServiceTest.class
