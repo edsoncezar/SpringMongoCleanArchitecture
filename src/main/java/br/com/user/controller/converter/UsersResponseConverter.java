@@ -1,6 +1,9 @@
-/*
- * 
+/**
+ * @author Edson Cezar
+ *
+ * Jul 4, 2019
  */
+
 package br.com.user.controller.converter;
 
 import org.springframework.stereotype.Component;
@@ -8,7 +11,6 @@ import org.springframework.stereotype.Component;
 import br.com.user.controller.resource.UsersResource;
 import br.com.user.domain.Users;
 import br.com.user.utils.AESEncryption;
-
 
 /**
  * The Class UsersResponseConverter.

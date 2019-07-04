@@ -1,6 +1,9 @@
-/*
- * 
+/**
+ * @author Edson Cezar
+ *
+ * Jul 4, 2019
  */
+
 package br.com.user.controller.request;
 
 import javax.validation.constraints.NotBlank;
@@ -13,55 +16,15 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * To string.
+ * Instantiates a new users resource request.
  *
- * @return the java.lang. string
- */
-
-/**
- * To string.
- *
- * @return the java.lang. string
+ * @param action   the action
+ * @param user     the user
+ * @param password the password
  */
 @Data
-
-/**
- * To string.
- *
- * @return the java.lang. string
- */
-
-/**
- * To string.
- *
- * @return the java.lang. string
- */
 @Builder
-
-/**
- * Instantiates a new users resource request.
- */
-
-/**
- * Instantiates a new users resource request.
- */
 @NoArgsConstructor
-
-/**
- * Instantiates a new users resource request.
- *
- * @param action   the action
- * @param user     the user
- * @param password the password
- */
-
-/**
- * Instantiates a new users resource request.
- *
- * @param action   the action
- * @param user     the user
- * @param password the password
- */
 @AllArgsConstructor
 public class UsersResourceRequest {
 

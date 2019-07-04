@@ -1,6 +1,9 @@
-/*
- * 
+/**
+ * @author Edson Cezar
+ *
+ * Jul 4, 2019
  */
+
 package br.com.user.repository;
 
 import java.util.List;
@@ -9,7 +12,6 @@ import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Component;
 
 import br.com.user.domain.Users;
-
 
 /**
  * The Interface UsersRepository.

@@ -1,5 +1,7 @@
-/*
- * 
+/**
+ * @author Edson Cezar
+ *
+ * Jul 4, 2019
  */
 package br.com.user.service;
 
@@ -15,23 +17,10 @@ import br.com.user.domain.Users;
 import br.com.user.repository.UsersRepository;
 import lombok.AllArgsConstructor;
 
-
 /**
  * The Class AddUsersService.
  */
 @Service
-
-/**
- * Instantiates a new adds the users service.
- *
- * @param usersRepository the users repository
- */
-
-/**
- * Instantiates a new adds the users service.
- *
- * @param usersRepository the users repository
- */
 @AllArgsConstructor
 public class AddUsersService {
 

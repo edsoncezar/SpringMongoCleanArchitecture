@@ -1,12 +1,13 @@
-/*
- * 
+/**
+ * @author Edson Cezar
+ *
+ * Jul 4, 2019
  */
 package br.com.user.utils;
 
 import javax.crypto.Cipher;
 import javax.crypto.KeyGenerator;
 import javax.crypto.SecretKey;
-
 
 /**
  * The Class AESEncryption.

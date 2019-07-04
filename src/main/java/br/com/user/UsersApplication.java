@@ -1,6 +1,9 @@
-/*
- * 
+/**
+ * @author Edson Cezar
+ *
+ * Jul 4, 2019
  */
+
 package br.com.user;
 
 import org.springframework.boot.SpringApplication;

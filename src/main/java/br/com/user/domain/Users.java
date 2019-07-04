@@ -1,6 +1,9 @@
-/*
- * 
+/**
+ * @author Edson Cezar
+ *
+ * Jul 4, 2019
  */
+
 package br.com.user.domain;
 
 import java.time.LocalDateTime;
@@ -13,58 +16,17 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * To string.
+ * Instantiates a new users.
  *
- * @return the java.lang. string
- */
-
-/**
- * To string.
- *
- * @return the java.lang. string
+ * @param user           the user
+ * @param password       the password
+ * @param active         the active
+ * @param lastUpdateDate the last update date
  */
 @Data
-
-/**
- * To string.
- *
- * @return the java.lang. string
- */
-
-/**
- * To string.
- *
- * @return the java.lang. string
- */
 @Builder
 @Document("users")
-
-/**
- * Instantiates a new users.
- */
-
-/**
- * Instantiates a new users.
- */
 @NoArgsConstructor
-
-/**
- * Instantiates a new users.
- *
- * @param user           the user
- * @param password       the password
- * @param active         the active
- * @param lastUpdateDate the last update date
- */
-
-/**
- * Instantiates a new users.
- *
- * @param user           the user
- * @param password       the password
- * @param active         the active
- * @param lastUpdateDate the last update date
- */
 @AllArgsConstructor
 public class Users {
 

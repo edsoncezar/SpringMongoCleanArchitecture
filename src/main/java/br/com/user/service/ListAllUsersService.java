@@ -1,5 +1,7 @@
-/*
- * 
+/**
+ * @author Edson Cezar
+ *
+ * Jul 4, 2019
  */
 package br.com.user.service;
 
@@ -11,7 +13,6 @@ import org.springframework.stereotype.Service;
 import br.com.user.domain.Users;
 import br.com.user.repository.UsersRepository;
 import lombok.AllArgsConstructor;
-
 
 /**
  * The Class ListAllUsersService.

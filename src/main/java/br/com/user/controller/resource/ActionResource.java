@@ -1,6 +1,9 @@
-/*
- * 
+/**
+ * @author Edson Cezar
+ *
+ * Jul 4, 2019
  */
+
 package br.com.user.controller.resource;
 
 import java.util.Arrays;
@@ -11,39 +14,14 @@ import com.fasterxml.jackson.annotation.JsonValue;
 
 import br.com.user.controller.request.UsersResourceRequest;
 import lombok.AllArgsConstructor;
-import lombok.Getter;
 
-
-/**
- * Gets the name.
- *
- * @return the name
- */
-
-/**
- * Gets the name.
- *
- * @return the name
- */
-@Getter
-
-/**
- * Instantiates a new action resource.
- *
- * @param name the name
- */
-
-/**
- * Instantiates a new action resource.
- *
- * @param name the name
- */
 @AllArgsConstructor
 public enum ActionResource {
 
     /** The add. */
-    ADD("Add"), /** The remove. */
- REMOVE("Remove");
+    ADD("Add"),
+    /** The remove. */
+    REMOVE("Remove");
 
     /** The name. */
     public String name;

@@ -1,6 +1,9 @@
-/*
- * 
+/**
+ * @author Edson Cezar
+ *
+ * Jul 4, 2019
  */
+
 package br.com.user.controller.converter;
 
 import org.springframework.stereotype.Component;
@@ -8,7 +11,6 @@ import org.springframework.stereotype.Component;
 import br.com.user.controller.request.UsersResourceRequest;
 import br.com.user.domain.Users;
 import br.com.user.utils.AESEncryption;
-
 
 /**
  * The Class UsersRequestConverter.
@@ -36,7 +38,6 @@ public class UsersRequestConverter {
 	    users.setPassword(password);
 
 	} catch (Exception e) {
-	    // TODO Auto-generated catch block
 	    e.printStackTrace();
 	}
 

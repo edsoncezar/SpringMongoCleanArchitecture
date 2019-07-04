@@ -33,10 +33,7 @@ import lombok.AllArgsConstructor;
 
 /**
  * The Class UsersController.
- */
-@RestController
-
-/**
+ *
  * Instantiates a new users controller.
  *
  * @param listAllUsersService    the list all users service
@@ -46,6 +43,7 @@ import lombok.AllArgsConstructor;
  * @param usersRequestConverter  the users request converter
  * @param usersResponseConverter the users response converter
  */
+@RestController
 @AllArgsConstructor
 @RequestMapping("/v1/users")
 public class UsersController {
