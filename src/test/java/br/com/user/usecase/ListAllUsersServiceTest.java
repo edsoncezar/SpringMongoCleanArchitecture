@@ -1,3 +1,8 @@
+/**
+ * @author Edson Cezar
+ *
+ * Jul 4, 2019
+ */
 package br.com.user.usecase;
 
 import static org.junit.Assert.assertNotNull;
@@ -18,18 +23,32 @@ import br.com.user.repository.UsersRepository;
 import br.com.user.service.ListAllUsersService;
 import br.com.user.service.ListUsersByIdService;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class ListAllUsersServiceTest.
+ */
 @RunWith(MockitoJUnitRunner.class)
 public class ListAllUsersServiceTest {
 
+    /** The list all users service. */
     @InjectMocks
     private ListAllUsersService listAllUsersService;
+    
+    /** The list users by id service. */
     @InjectMocks
     private ListUsersByIdService listUsersByIdService;
+    
+    /** The users users repository. */
     @Mock
     private UsersRepository usersUsersRepository;
+    
+    /** The users users request to users converter. */
     @Mock
     private UsersRequestConverter usersUsersRequestToUsersConverter;
 
+    /**
+     * Test should list all users service.
+     */
     @Test
     public void testShouldListAllUsersService() {
 

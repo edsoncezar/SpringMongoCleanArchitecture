@@ -14,7 +14,9 @@ import com.fasterxml.jackson.annotation.JsonValue;
 
 import br.com.user.controller.request.UsersResourceRequest;
 import lombok.AllArgsConstructor;
+import lombok.Getter;
 
+@Getter
 @AllArgsConstructor
 public enum ActionResource {
 

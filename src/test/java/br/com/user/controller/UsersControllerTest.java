@@ -1,3 +1,8 @@
+/**
+ * @author Edson Cezar
+ *
+ * Jul 4, 2019
+ */
 package br.com.user.controller;
 
 import static org.junit.Assert.assertNotNull;
@@ -29,28 +34,54 @@ import br.com.user.service.ListUsersByIdService;
 import br.com.user.service.RemoveUsersService;
 import br.com.user.utils.AESEncryption;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class UsersControllerTest.
+ */
 @RunWith(MockitoJUnitRunner.class)
 public class UsersControllerTest {
 
+    /** The controller. */
     @InjectMocks
     private UsersController controller;
+    
+    /** The list all users service. */
     @Mock
     private ListAllUsersService listAllUsersService;
+    
+    /** The list users by id service. */
     @Mock
     private ListUsersByIdService listUsersByIdService;
+    
+    /** The add users service. */
     @Mock
     private AddUsersService addUsersService;
+    
+    /** The remove users service. */
     @Mock
     private RemoveUsersService removeUsersService;
+    
+    /** The users users repository. */
     @Mock
     private UsersRepository usersUsersRepository;
+    
+    /** The users users to users response converter. */
     @Spy
     private UsersResponseConverter usersUsersToUsersResponseConverter;
+    
+    /** The users users request to users converter. */
     @Spy
     private UsersRequestConverter usersUsersRequestToUsersConverter;
+    
+    /** The ae S encryption. */
     @Mock
     private AESEncryption aeSEncryption;
 
+    /**
+     * Test should list all users.
+     *
+     * @throws Exception the exception
+     */
     @Test
     public void testShouldListAllUsers() throws Exception {
 
@@ -60,6 +91,9 @@ public class UsersControllerTest {
 
     }
 
+    /**
+     * Test should list users using one list of users codes.
+     */
     @Test
     public void testShouldListUsersUsingOneListOfUsersCodes() {
 
@@ -73,6 +107,9 @@ public class UsersControllerTest {
 
     }
 
+    /**
+     * Test should add users without removing.
+     */
     @Test
     public void testShouldAddUsersWithoutRemoving() {
 

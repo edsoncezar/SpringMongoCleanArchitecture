@@ -1,3 +1,8 @@
+/**
+ * @author Edson Cezar
+ *
+ * Jul 4, 2019
+ */
 package br.com.user.usecase;
 
 import static org.mockito.ArgumentMatchers.any;
@@ -18,18 +23,32 @@ import br.com.user.repository.UsersRepository;
 import br.com.user.service.RemoveUsersService;
 import br.com.user.utils.AESEncryption;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class RemoveUsersServiceTest.
+ */
 @RunWith(MockitoJUnitRunner.class)
 public class RemoveUsersServiceTest {
 
+    /** The remove users service. */
     @InjectMocks
     private RemoveUsersService removeUsersService;
+    
+    /** The users users repository. */
     @Mock
     private UsersRepository usersUsersRepository;
+    
+    /** The users users request to users converter. */
     @Mock
     private UsersRequestConverter usersUsersRequestToUsersConverter;
+    
+    /** The ae S encryption. */
     @Mock
     private AESEncryption aeSEncryption;
 
+    /**
+     * Test should remove users service test.
+     */
     @Test
     public void testShouldRemoveUsersServiceTest() {
 
