@@ -12,7 +12,7 @@ import org.mockito.junit.MockitoJUnitRunner;
 
 import br.com.user.controller.request.UsersResourceRequest;
 
-// TODO: Auto-generated Javadoc
+
 /**
  * The Class ActionsResourceTest.
  */
@@ -92,7 +92,7 @@ public class ActionsResourceTest {
      */
     @Test
     public void testGetName() {
-	Assert.assertEquals("Add", ActionResource.ADD.get);
+	Assert.assertEquals("Add", ActionResource.ADD.getName());
     }
 
 }

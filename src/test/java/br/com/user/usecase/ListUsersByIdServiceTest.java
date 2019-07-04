@@ -22,7 +22,7 @@ import br.com.user.domain.Users;
 import br.com.user.repository.UsersRepository;
 import br.com.user.service.ListUsersByIdService;
 
-// TODO: Auto-generated Javadoc
+
 /**
  * The Class ListUsersByIdServiceTest.
  */

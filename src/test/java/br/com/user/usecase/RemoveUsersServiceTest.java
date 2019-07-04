@@ -23,7 +23,7 @@ import br.com.user.repository.UsersRepository;
 import br.com.user.service.RemoveUsersService;
 import br.com.user.utils.AESEncryption;
 
-// TODO: Auto-generated Javadoc
+
 /**
  * The Class RemoveUsersServiceTest.
  */
