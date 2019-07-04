@@ -1,3 +1,6 @@
+/*
+ * 
+ */
 package br.com.user.service;
 
 import java.time.LocalDateTime;
@@ -12,13 +15,35 @@ import br.com.user.domain.Users;
 import br.com.user.repository.UsersRepository;
 import lombok.AllArgsConstructor;
 
+
+/**
+ * The Class AddUsersService.
+ */
 @Service
+
+/**
+ * Instantiates a new adds the users service.
+ *
+ * @param usersRepository the users repository
+ */
+
+/**
+ * Instantiates a new adds the users service.
+ *
+ * @param usersRepository the users repository
+ */
 @AllArgsConstructor
 public class AddUsersService {
 
+    /** The users repository. */
     @Autowired
     UsersRepository usersRepository;
 
+    /**
+     * Adds the.
+     *
+     * @param credentials the credentials
+     */
     public void add(List<Users> credentials) {
 
 	final var credential = credentials.stream().map(this::setActive).collect(Collectors.toList());
@@ -26,6 +51,12 @@ public class AddUsersService {
 	usersRepository.saveAll(credentials);
     }
 
+    /**
+     * Sets the active.
+     *
+     * @param credential the credential
+     * @return the users
+     */
     private Users setActive(Users credential) {
 	credential.setActive(true);
 	credential.setLastUpdateDate(LocalDateTime.now(ZoneId.of("Brazil/East")));

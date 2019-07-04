@@ -1,3 +1,6 @@
+/*
+ * 
+ */
 package br.com.user.service;
 
 import java.time.LocalDateTime;
@@ -12,13 +15,35 @@ import br.com.user.domain.Users;
 import br.com.user.repository.UsersRepository;
 import lombok.AllArgsConstructor;
 
+
+/**
+ * The Class RemoveUsersService.
+ */
 @Service
+
+/**
+ * Instantiates a new removes the users service.
+ *
+ * @param usersRepository the users repository
+ */
+
+/**
+ * Instantiates a new removes the users service.
+ *
+ * @param usersRepository the users repository
+ */
 @AllArgsConstructor
 public class RemoveUsersService {
 
+    /** The users repository. */
     @Autowired
     UsersRepository usersRepository;
 
+    /**
+     * Removes the.
+     *
+     * @param credentials the credentials
+     */
     public void remove(List<Users> credentials) {
 
 	final var credential = credentials.stream().map(this::setActive).collect(Collectors.toList());
@@ -26,6 +51,12 @@ public class RemoveUsersService {
 	usersRepository.saveAll(credentials);
     }
 
+    /**
+     * Sets the active.
+     *
+     * @param users the users
+     * @return the users
+     */
     private Users setActive(Users users) {
 	users.setActive(false);
 	users.setLastUpdateDate(LocalDateTime.now(ZoneId.of("Brazil/East")));
