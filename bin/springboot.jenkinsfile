@@ -1,0 +1,44 @@
+@Library('cvc-jenkins-lib')
+import br.com.cvccorp.jenkins.Commons
+final commons = new Commons()
+
+final _projectName = "users-credentials"
+final _namespace = "users-credentials"
+final _gitUrl = "git@git.cvc.com.br:Desenvolvimento-MS/users-credentials.git"
+final _appUrlTi = "users-credentials.k8s-ti-cvc.com.br"
+final _appUrlQa = "users-credentials.k8s-qa-cvc.com.br"
+final _appUrlProd = "users-credentials.k8s-cvc.com.br"
+
+node {
+  deployTI(_projectName, _namespace, _gitUrl, _appUrlTi) {
+      stage('Pulling do codigo') {
+          commons.cloneOrCheckoutTagFromGit(_gitUrl)
+      }
+      stage('Build') {
+          commons.runMavenGoalsWithJava11('-P nexus clean package -Dmaven.test.skip=true')
+      }
+      stage('Unit Tests') {
+          commons.runMavenGoalsWithJava11('test')
+      }
+      stage('SonarQube') {
+          def sonarqubeServer = "https://sonar.app.cvc.com.br"
+          commons.runMavenGoalsWithJava8("sonar:sonar -Dsonar.host.url=$sonarqubeServer -Dsonar.login=5bb21f744e4a8d148ab564f50bd122b82210f667")
+          commons.getSonarStatus(sonarqubeServer, _projectName)
+      }
+      stage('Vault') {
+          def vaultHost = "http://vault-dev.services.cvc.com.br:8200"
+          def vaultToken = "e58a9b13-747b-c29e-92f4-b983c222cd71"
+          commons.setUpVault(vaultHost, vaultToken,_projectName)
+      }
+      stage('Consul') {
+          def consulHost = "http://consul-dev.services.cvc.com.br:8500"
+          commons.setUpConsul(consulHost)
+      }
+  }
+    deployQA(_projectName, _namespace, _gitUrl,_appUrlQa) {
+        // TODO stage steps
+    }
+    deployPRD(_projectName, _namespace, _gitUrl,_appUrlProd) {
+        // TODO stage steps
+    }
+}

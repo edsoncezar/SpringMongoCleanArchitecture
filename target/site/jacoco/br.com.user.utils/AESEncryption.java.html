@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>AESEncryption.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">users-credentials</a> &gt; <a href="index.source.html" class="el_package">br.com.user.utils</a> &gt; <span class="el_source">AESEncryption.java</span></div><h1>AESEncryption.java</h1><pre class="source lang-java linenums">package br.com.user.utils;
+
+import javax.crypto.Cipher;
+import javax.crypto.KeyGenerator;
+import javax.crypto.SecretKey;
+
+<span class="fc" id="L7">public class AESEncryption {</span>
+
+    public static byte[] encryptCredential(String plainText) throws Exception {
+<span class="fc" id="L10">	Cipher aesCipher = Cipher.getInstance(&quot;AES&quot;);</span>
+<span class="fc" id="L11">	aesCipher.init(Cipher.ENCRYPT_MODE, getSecretEncryptionKey());</span>
+<span class="fc" id="L12">	byte[] byteCipherText = aesCipher.doFinal(plainText.getBytes());</span>
+<span class="fc" id="L13">	return byteCipherText;</span>
+    }
+
+    public static String decryptCredential(byte[] byteCipherText) throws Exception {
+<span class="nc" id="L17">	Cipher aesCipher = Cipher.getInstance(&quot;AES&quot;);</span>
+<span class="nc" id="L18">	aesCipher.init(Cipher.DECRYPT_MODE, getSecretEncryptionKey());</span>
+<span class="nc" id="L19">	byte[] bytePlainText = aesCipher.doFinal(byteCipherText);</span>
+<span class="nc" id="L20">	return new String(bytePlainText);</span>
+    }
+
+    public static SecretKey getSecretEncryptionKey() throws Exception {
+<span class="fc" id="L24">	KeyGenerator generator = KeyGenerator.getInstance(&quot;AES&quot;);</span>
+<span class="fc" id="L25">	generator.init(128);</span>
+<span class="fc" id="L26">	SecretKey secKey = generator.generateKey();</span>
+<span class="fc" id="L27">	return secKey;</span>
+    }
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>

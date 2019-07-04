@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: users-credentials
+  cloud:
+    vault:
+      scheme: http
+      host: vault-dev.services.cvc.com.br
+      port: 8200
+      authentication: TOKEN
+      token: 1gdzJDLDyseAQbtTTqu9sDf6
+      enabled: false
+      generic:
+        default-context: users-credentials
+      config:
+        order: -10
