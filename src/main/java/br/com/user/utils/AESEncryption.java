@@ -9,10 +9,26 @@ import javax.crypto.Cipher;
 import javax.crypto.KeyGenerator;
 import javax.crypto.SecretKey;
 
+
 /**
  * The Class AESEncryption.
  */
 public class AESEncryption {
+
+    /** The sec key. */
+    private static SecretKey secKey;
+
+    /**
+     * Instantiates a new AES encryption.
+     */
+    public AESEncryption() {
+	super();
+	try {
+	    this.secKey = getSecretEncryptionKey();
+	} catch (Exception e) {
+	    e.printStackTrace();
+	}
+    }
 
     /**
      * Encrypt credential.
@@ -21,9 +37,9 @@ public class AESEncryption {
      * @return the byte[]
      * @throws Exception the exception
      */
-    public static byte[] encryptCredential(String plainText) throws Exception {
+    public byte[] encryptCredential(String plainText) throws Exception {
 	Cipher aesCipher = Cipher.getInstance("AES");
-	aesCipher.init(Cipher.ENCRYPT_MODE, getSecretEncryptionKey());
+	aesCipher.init(Cipher.ENCRYPT_MODE, this.secKey);
 	byte[] byteCipherText = aesCipher.doFinal(plainText.getBytes());
 	return byteCipherText;
     }
@@ -35,9 +51,9 @@ public class AESEncryption {
      * @return the string
      * @throws Exception the exception
      */
-    public static String decryptCredential(byte[] byteCipherText) throws Exception {
+    public String decryptCredential(byte[] byteCipherText) throws Exception {
 	Cipher aesCipher = Cipher.getInstance("AES");
-	aesCipher.init(Cipher.DECRYPT_MODE, getSecretEncryptionKey());
+	aesCipher.init(Cipher.DECRYPT_MODE, this.secKey);
 	byte[] bytePlainText = aesCipher.doFinal(byteCipherText);
 	return new String(bytePlainText);
     }
