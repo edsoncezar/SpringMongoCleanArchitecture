@@ -230,19 +230,13 @@ And test it using postman and this simple json:
 
 
 {
-
-  "users":[
-
-            {
-
-              "user":"edson",
-
-              "password":"123test"
-
-            }
-
-          ]
-
+"users":[
+        {
+          "action":"ADD", 
+          "user":"edson",
+          "password":"123test"
+        }
+      ]
 }
 
 
